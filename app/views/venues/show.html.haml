@@ -1,0 +1,50 @@
+- model_class = Venue
+.page-header
+  %h1= t '.title', :default => @venue.name
+%dl.dl-horizontal
+  %dt
+    %strong Категории:
+  %dd
+    %ul
+      - @venue.categories.each do |category|
+        %li{:style => 'list-style:none'}= category.name_ru
+  %dt
+    %strong
+      Название
+      \:
+  %dd= @venue.name
+  %dt
+    %strong
+      Адрес
+      \:
+  %dd= @venue.address || "none"
+  %dt
+    %strong
+      Рейтинг
+      \:
+  %dd= @venue.rating || "none"
+  %dt
+    %strong
+      Количество чекинов
+      \:
+  %dd= @venue.checkins_count
+  %dt
+    %strong
+      Посетителей
+      \:
+  %dd= @venue.users_count
+  %dt
+    %strong
+      Подсказок
+      \:
+  %dd= @venue.tips_count
+  %dt
+    %strong
+      Фотографий
+      \:
+  %dd= @venue.photos_count
+  %dt
+    %strong Ссылка на Foursquare:
+  %dd
+    = image_tag('poweredby_16x16.png')
+    = link_to @venue.name, foursquare_url(@venue)

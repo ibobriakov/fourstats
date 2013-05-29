@@ -1,0 +1,12 @@
+<div class="span4 pull-right">
+  <%= form_tag url_for(:only_path => false), remote: true, method: :get, :class => 'form-inline' do %>
+    <div class="control-group info">
+      <label class="control-label" for="inputInfo">Категория: </label>
+      <%= select_tag( :category_id, 
+                      content_tag(:option,'Все',:value => "all") + options_from_collection_for_select(@collection, :id, :name_ru, params[:category_id]), 
+                      :onchange => "$('#go').click()") %>
+      <input type="hidden" name="type" value="<%= @type %>">
+      <%= submit_tag "Go!", :class => "btn", :id => "go", :style => "display:none;" %>
+    </div>
+  <% end %>
+</div>

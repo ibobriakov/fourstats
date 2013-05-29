@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  rating: 9.99
+  checkins_count: 1
+  users_count: 1
+  tips_count: 1
+  photos_count: 1
+
+two:
+  name: MyString
+  description: MyText
+  rating: 9.99
+  checkins_count: 1
+  users_count: 1
+  tips_count: 1
+  photos_count: 1

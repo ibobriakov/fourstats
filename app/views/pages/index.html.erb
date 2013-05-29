@@ -1,0 +1,47 @@
+<h1>Pages#index</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+
+<p>
+  509beed6498e0d95ea4308d6
+  <br />
+  <%= @venue.inspect %>
+</p>
+_____________________________________________________________________________________________________________
+asd = <%= "#{@venue.json['location']['city']},"+" #{@venue.json['location']['address']}" %>
+
+<h3><%= @venue.name %></h3><br>
+Venue rating: <%= @venue.json["rating"] %><br>
+Photos count: <b><%= @venue.photos_count %></b><br>
+Checkins count: <%= @venue.stats["checkinsCount"] %><br>
+Users count: <%= @venue.stats["usersCount"] %><br>
+Tips count: <%= @venue.json["tips"]["count"] %> <br>
+
+
+Categories: <%= @venue.categories %> <br>
+  <% @venue.categories.each do |category| %>
+  | <%= category.name %>
+  <% end %>
+
+
+
+<h2>Specials:</h1>
+  <% i = 1 %>
+  <% @venue.json["specials"].each do |element| %>
+    <%= i %>th special: <br>
+    <%= element["message"].size %><br>
+    <%= element["id"] %><br>
+    <%= element["finePrint"] %><br>
+    <% i += 1 %>
+  <% end %>
+<br>
+
+
+<% @venue.photos.each do |photo| %>
+  <%= link_to image_tag(photo.square_100_url, :class => 'img-rounded'), photo.url %>
+<% end %>
+<br>
+<% @venues.each do |venue| %>
+  </b> <%= image_tag venue.icon %> | 
+  <b>Venue name:</b> <%= venue.name %> | 
+  <b>Checkins Count:</b> <%= venue.stats["checkinsCount"] %> | <b>Users count:</b> <%= venue.stats["usersCount"] %> | <b>ID:</b> <%= venue.id %> <br>
+<% end %>

@@ -1,0 +1,37 @@
+/*Fourstats-----------------------------------------general-----------------------------------*/
+
+.clear { clear: both; height: 0; }
+#body { height: auto; min-height: 100%; }
+
+/*----------------------------------------
+		HEADER
+-------------------------------------*/
+
+.navbar-inner { height: 50px; }
+.navbar-inner nav ul { padding: 5px 0 0 0; }
+#logo { font-size: 16px; line-height: 52px; color: #0088cc; }
+#logo img { padding: 0 10px 13px 0; }
+#logo:hover, #logo:focus { text-decoration: none; }
+
+.topnav { padding: 6px 0 0 0; }
+.topnav a:hover, .topnav a:focus { text-decoration: underline !important; }
+
+/*----------------------------------------
+		CONTENT
+-------------------------------------*/
+
+h4 { font-size: 14px; text-align: center; }
+
+.media-list { width: 100%; display: inline-block; margin: 0; }
+.media-list li { margin: 10px 0 0 0; line-height: 15px;  }
+.media-list li .img { float: left; width: 6%; margin: 5px 10px 0 0; }
+.media-list li .body { float: left; width: 84%; }
+.media-list li .body h4 { margin: 0 0 5px 0; text-align: left; }
+.media-list li .count { float: right; width: 6%; font-weight: bold; margin: 10px 0 0 10px; }
+
+.affix { margin-top: -50px; margin-left: 51.85% !important; width: 40.17094017094017% !important; }
+#map-sidebar { padding: 5px; }
+
+#rasporka { height: 129px; margin: 70px 0 0 0; }
+footer { width: 100%; height: 89px; margin-top: -129px; text-align: center; padding: 30px 0; border-top: 1px solid #e5e5e5; background-color: whiteSmoke; }
+footer .wrapper { padding: 0 10px;height: 100%; position: relative; margin: 0 auto; }

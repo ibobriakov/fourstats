@@ -1,0 +1,13 @@
+<h4><%= @title %>
+  <% if params[:category_id] %>
+   | Категория: <%= Category.find(params[:category_id]).name_ru %>
+  <% end %>
+</h4>
+
+<div id="toappend">
+  <%= render 'pages/shared/venues' %>
+</div>
+
+<div id ="paginate">
+  <%= render 'pages/shared/will_paginate' %>
+</div>

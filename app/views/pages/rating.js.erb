@@ -1,0 +1,10 @@
+<% if params[:commit] == "Go!" && params[:action_key] != "pag" %>
+  $('#main_content').html("<%= j render(:partial => 'pages/shared/rating') %>");
+  $('#type_nav').html("<%=j render('pages/shared/type_nav') %>");
+  Gmaps.map.replaceMarkers(<%= raw @json %>);
+
+<% elsif params[:action_key] == "pag" %>
+  $("<%= j render(:partial => 'pages/shared/venues') %>").appendTo('#toappend')
+  $("#paginate").html("<%= j render('pages/shared/will_paginate') %>");
+  Gmaps.map.addMarkers(<%= raw @json %>);
+<% end %>

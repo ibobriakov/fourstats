@@ -1,0 +1,37 @@
+= form_for @venue, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .control-group
+    = f.label :rating, :class => 'control-label'
+    .controls
+      = f.text_field :rating, :class => 'text_field'
+  .control-group
+    = f.label :checkins_count, :class => 'control-label'
+    .controls
+      = f.number_field :checkins_count, :class => 'number_field'
+  .control-group
+    = f.label :users_count, :class => 'control-label'
+    .controls
+      = f.number_field :users_count, :class => 'number_field'
+  .control-group
+    = f.label :tips_count, :class => 'control-label'
+    .controls
+      = f.number_field :tips_count, :class => 'number_field'
+  .control-group
+    = f.label :photos_count, :class => 'control-label'
+    .controls
+      = f.number_field :photos_count, :class => 'number_field'
+  .control-group
+    = f.label "Foursquare ID", :class => 'control-label'
+    .controls
+      = f.text_field :id_foursquare, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), |
+      venues_path, :class => 'btn'                                 |

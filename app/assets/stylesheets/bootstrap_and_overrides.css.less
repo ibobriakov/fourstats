@@ -1,0 +1,85 @@
+@import "twitter/bootstrap/bootstrap";
+body { 
+	padding-top: 60px;
+}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not 
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
+@fontAwesomeEotPath_iefix: asset-path("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
+@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
+@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+
+// Font Awesome
+@import "fontawesome";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+#glav{
+  border: 1px solid #CCC;
+  border-radius: 7px 7px 7px 7px;
+  padding: 0 19px 10px 20px;
+}
+
+.nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+}
+
+#map-sidebar {
+  padding: 5px 5px 20px 5px;
+}
+
+.control-group.info > label,
+.control-group.info .help-block,
+.control-group.info .help-inline {
+  color: #005580;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
+  background-color: whiteSmoke;
+}
+
+input#search {
+  padding-top: 16px;
+  padding-bottom: 11px;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: 18px;
+  background: url('/assets/icon-search.png') no-repeat 5px 8px;
+  width: 88%;
+}

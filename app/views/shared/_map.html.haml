@@ -1,0 +1,8 @@
+#map-sidebar.well.sidebar-nav-fixed
+  / <h3>Sidebar</h3>
+  #map_container
+    - if params[:controller] == 'venues'
+      = gmaps(:map_options => {"auto_zoom" => false, "zoom" => 15}, :markers => { "data" => @json })
+    - else
+      = gmaps4rails(@json)
+/ /.well

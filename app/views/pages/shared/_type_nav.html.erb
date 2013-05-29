@@ -1,0 +1,27 @@
+<ul class="nav nav-pills">
+  <li style="padding-top:7px; padding-bottom:8px;">Сортировать по: </li>
+  <li class=<%= 'active' if params[:type] == 'checkins_count' %> >  
+    <%= link_to "Чекины", pages_rating_path(:type => "checkins_count", :category_id => @category_id) %>
+  </li>
+
+  <li class=<%= 'active' if params[:type] == 'rating' %> >
+    <%= link_to "Рейтинг", pages_rating_path(:type => "rating", :category_id => @category_id) %>
+  </li>
+  
+  
+  <li class=<%= 'active' if params[:type] == 'users_count' %> >
+    <%= link_to "Посетители", pages_rating_path(:type => "users_count", :category_id => @category_id) %>
+  </li>
+  
+  <li class=<%= 'active' if params[:type] == 'tips_count' %> >
+    <%= link_to "Подсказки", pages_rating_path(:type => "tips_count", :category_id => @category_id) %>
+  </li>
+
+  <li class=<%= 'active' if params[:type] == 'photos_count' %> >
+    <%= link_to "Фотографии", pages_rating_path(:type => "photos_count", :category_id => @category_id) %>
+  </li>
+
+  <li class=<%= 'active' if params[:type] == 'specials' %> >
+    <%= link_to "Specials", pages_rating_path(:type => "specials"), :style => "display:none;" %>
+  </li>
+</ul>

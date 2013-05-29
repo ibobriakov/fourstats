@@ -1,0 +1,16 @@
+<ul class="media-list">
+  <% @venues.each do |venue| %>
+    <li>
+      <div class="img">
+        <%= category_icon primary_category(venue) %>
+      </div>
+      <div class="body">
+        <h4><%= link_to venue.name, venue %></h4> <%= venue.address %>
+      </div>
+      <div class="count">
+        <%= (venue.send @type.to_sym).to_s %>
+      </div>
+      <div class="clear">&nbsp;</div>
+    </li>
+  <% end %>
+</ul>

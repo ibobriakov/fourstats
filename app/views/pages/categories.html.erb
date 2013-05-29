@@ -1,0 +1,18 @@
+<h3>Категории foursquare и уровень вложенности</h3>
+<ul>
+<% @categories.each do |first_level| %>
+  <li><%= image_tag first_level.icon %> | <%= first_level.name %> | <%= first_level.id %></li>
+
+  <% first_level.categories.each do |second_level| %>
+    <ul>
+      <li><%= image_tag second_level.icon %> | <%= second_level.name %></li>
+    </ul>
+    
+    <% second_level.categories.each do |third_level| %>
+----------<%= image_tag third_level.icon %> | <%= third_level.name %><br>
+    <% end %>
+  
+  <% end %>
+
+<% end %>
+</ul>

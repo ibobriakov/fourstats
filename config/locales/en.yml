@@ -1,0 +1,3 @@
+en:
+  will_paginate:
+    next_label: "Load more"

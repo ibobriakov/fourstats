@@ -1,0 +1,12 @@
+defaults: &defaults
+  app_id: N42V3JIXE5OZNRYFIGX2AD1UCOS3KNUD5DEKPHVXDU13E15M
+  app_secret: 4FVVAOR2DRTJFZYYDEOLL304ZLZ2GE3CW4D40CKRFHBZESDT
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

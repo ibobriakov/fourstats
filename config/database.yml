@@ -1,0 +1,40 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  adapter: sqlite3
+  #password: admin # from psql setup, see Postgresql
+  database: foursquare_app_development
+
+test:
+  <<: *common
+  username: mahasamatman
+  password: admin # from psql setup, see Postgresql
+  database: foursquare_app_test
+
+production:
+  <<: *common
+  database: foursquare_production
+  host: localhost
+  username: foursquare
+  password: stm3bdf6
+
+
+#common: &common
+#  adapter: postgresql
+#  username: foursquare
+#  password: stm3bdf6 # from psql setup, see Postgresql
+#  encoding: unicode
+
+#development:
+#  <<: *common
+#  database: foursquare_development
+
+#test:
+#  <<: *common
+#  database: foursquare_test
+
+#production:
+#  <<: *common
+#  database: foursquare_production
